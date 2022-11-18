@@ -1,0 +1,18 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:MauiTestApp.ViewModels"
+             x:Class="MauiTestApp.MainPage"
+             x:DataType="viewModels:LoginPageViewModel">
+    <Grid>
+        <StackLayout Margin="20" MaximumWidthRequest="300" VerticalOptions="Center" HorizontalOptions="Center">
+            <Entry Text="{Binding Username}" Placeholder="Username" ReturnCommand="{Binding LoginCommand}" />
+            <Entry IsPassword="true" Placeholder="Password" Text="{Binding Password}" ReturnCommand="{Binding LoginCommand}" />
+
+            <HorizontalStackLayout HorizontalOptions="Fill">
+                <CheckBox />
+                <Label Text="Remember me" VerticalOptions="Center"  />
+                <Button Text="Login" HorizontalOptions="End" Command="{Binding LoginCommand}" />
+            </HorizontalStackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>
